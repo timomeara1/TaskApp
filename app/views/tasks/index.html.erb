@@ -1,0 +1,45 @@
+<h1><strong>To Do List<strong></h1>
+
+<img src= "http://www.weirdworm.com/img/misc/10-bizarre-tattoos/to-do-list-tattoo.jpg" />
+<p>
+  
+  <% @all_tasks.each do | x |%>
+    <li> Task:  <%= x.task %> - <%= link_to "Status", "tasks/#{x.id}"%>  <%= link_to "Delete", "tasks/#{x.id}", :method => :delete%></li>
+    
+    
+    
+    <% end %>
+  
+</p>
+
+</p>
+
+<h2>Add a New Task</h2>
+
+<%= form_for @task do | f | %> 
+
+<p>
+
+     <%= f.label:task %> 
+     <%= f.text_field :task %>
+</p>
+
+<p>
+
+     <%= f.label:priority %> 
+     <%= f.text_field :priority %>
+</p>
+
+<p>
+
+     <%= f.label:status %> 
+     <%= f.text_field :status %>
+</p>
+
+
+<p><%= f.submit %></p> 
+
+
+<% end %>
+
+<img src= "http://image.shutterstock.com/display_pic_with_logo/131380/131380,1207311280,16/stock-vector-v-rose-and-snake-tattoo-tattoo-design-vector-drawing-11121589.jpg>" />

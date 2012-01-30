@@ -1,0 +1,25 @@
+<%= form_for @task do |form|%>
+
+<p>
+
+<%= form.label:task%>
+<%= form.text_field:task%>
+
+</p>
+
+
+<p>
+
+     <%= form.label:priority %> 
+     <%= form.text_field :priority %>
+</p>
+
+<p>
+
+     <%= form.label:status %> 
+     <%= form.text_field :status %>
+</p>
+
+<%= form.submit%>
+
+<% end %>

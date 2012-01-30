@@ -1,0 +1,11 @@
+<h1><%= @task.task %></h1>
+
+<img src= "http://www.weirdworm.com/img/misc/10-bizarre-tattoos/to-do-list-tattoo.jpg" />
+
+<ul>
+  <li> Name <%= @task.task %></li>
+  <li> Age <%= @task.priority %></li>
+  <li> Location <%= @task.status %></li>
+ <li><%= link_to "Edit", edit_task_url(@task.id)%> </li>
+ <li><%= link_to "Home", tasks_url %> </li>
+</ul>
